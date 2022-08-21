@@ -13,6 +13,15 @@ pipeline {
                 echo "M2_HOME = /opt/maven"
             }
         }
+        stage("running my shell script")
+        {
+            steps{
+            
+                sh '/home/jayakannan/Desktop/sample_shell.sh'
+            
+            }
+        
+        }
         stage('Build') {
             steps {
                 dir("/var/lib/jenkins/workspace/demomaven_pipepline/my-app") {
